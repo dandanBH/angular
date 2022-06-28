@@ -26,11 +26,11 @@ todas(): Observable<Transferencia[]>{
 }
 
 
-adicionar(transferencia: Transferencia){
+adicionar(transferencia: Transferencia): Observable<Transferencia>{
   this.hidratar(transferencia);
   //const trasnferencia = {...$event, data: new Date()}
   //this.listaTransferencia.push(transferencia);
-  this.httpClient.post(this.url, transferencia)
+ return this.httpClient.post<Transferencia>(this.url, transferencia);
 }
 
 private hidratar(transferencia: any){

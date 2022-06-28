@@ -7,14 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'bytebank';
 
   constructor(private service: TransferenciaService){
 
   }
 
-  transferir($event){
-    console.log($event);
-    this.service.adicionar($event)
-  }
 }
